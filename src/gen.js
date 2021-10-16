@@ -54,3 +54,50 @@ const internCard = function(intern) {
     </div>
     `
 };
+
+gen = (data) => {
+    arr = [];
+
+    for (let i=0; i < data.length; i++) {
+        const employee = data[i]
+        const role = employee.getRole();
+
+        switch(role) {
+            case 'Manager':
+                const mCard =  managerCard(employee);
+                arr.push(mCard);
+                break;
+            case 'Engineer': 
+                const eCard = engineerCard(employee);
+                arr.push(eCard);
+                break;
+            case 'Intern':
+                const iCard = internCard(employee);
+                arr.push(iCard);
+                break;
+            default: 
+                console.log("error");
+        }
+    }
+
+    const employeeCards = arr.join('');
+
+    const genTeam = genPage(employeeCards);
+    return genTeam;
+
+
+}
+
+const genPage = function(employeeCards) {
+    return `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0">
+        <title>Team Profile Generator - Hugo Samayoa</title>
+        <link rel="stylesheet" href="/fontawesome/css/all.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    `
+}
