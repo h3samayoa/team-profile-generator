@@ -177,3 +177,22 @@ const employeeInput = () => {
 };
 
 
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("Team profile created in dist folder under index.html!")
+        }
+    })
+};
+
+importManager()
+    .then(employeeInput)
+    .then(arr => {
+        return gen(arr);
+    })
+    .then(genPage => {
+        return writeFile(genPage)
+    })
