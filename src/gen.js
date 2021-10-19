@@ -98,6 +98,21 @@ const genPage = function(employeeCards) {
         <title>Team Profile Generator - Hugo Samayoa</title>
         <link rel="stylesheet" href="/fontawesome/css/all.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
     </head>
+    <body>
+        <header>
+            <nav class="navbar" id="navbar">
+                <span class="navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">Team Profile Generator</span>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row justify-content-center" id="team-cards">
+                    ${employeeCards}
+                </div>
+            </div>
+        </main>
+    </body>
     `
 }
