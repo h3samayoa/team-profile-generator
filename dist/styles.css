@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#navbar {
+    background-color: #E8ADAA;
+    color: white;
+    font-size: 50px;
+}
+
+.navbar-brand {
+    font-size: 50px;
+}
+
+.card-header {
+    background-color: #E8ADAA;
+    color: white;
+}
+
+.card-body {
+    
+}
