@@ -116,3 +116,5 @@ const genPage = function(employeeCards) {
     </body>
     `
 }
+
+module.exports = gen;
