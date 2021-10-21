@@ -1,10 +1,10 @@
-import gen from './src/gen';
-import Manager from './lib/Manager';
-import Intern from './lib/Intern';
-import Engineer from './lib/Engineer';
+const gen = require('./src/gen');
+const Manager = require('./lib/Manager');
+const Intern = require('./lib/Intern');
+const Engineer = require('./lib/Engineer');
 
-import fs from 'fs';
-import inquirer from 'inquirer';
+const fs = require('fs');
+const inquirer = require('inquirer');
 
 const arr = [];
 
@@ -41,7 +41,7 @@ const importManager = () => {
             name: 'email',
             message: "Input the Manager's email: ",
             validate: input => {
-                input = value.match(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+                input = input.match(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
                 if (input) {
                     return true;
                 } else {
@@ -112,7 +112,7 @@ const employeeInput = () => {
             name: 'email',
             message: "Input the Employee's email: ",
             validate: input => {
-                input = value.match(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+                input = input.match(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
                 if (input) {
                     return true;
                 } else {

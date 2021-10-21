@@ -22,5 +22,12 @@ body {
 }
 
 .card-body {
-    
+    background-color: #E8ADAA;
+    color: white;
+}
+
+.container {
+    margin: 100px auto;
+    justify-content: space-around;
+    display: flex;
 }
